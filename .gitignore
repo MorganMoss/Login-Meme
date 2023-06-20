@@ -1,0 +1,9 @@
+# dependencies
+/backend/node_modules
+/.pnp
+.pnp.js
+/.vscode/
+/backend/package-lock.json
+
+# misc
+/backend/config/config.env
