@@ -9,12 +9,9 @@ dotenv.config({ path: './config/config.env' });
 
 app.use(express.json());
 
-const auth = require('./controllers/authController');
-const google = require('./controllers/googleAuthController')
+const user = require('./controllers/userController');
 
-app.use('api/v1/', auth);
-app.use('api/v1/google', auth);
-
+app.use('/api/v1/', user);
 
 app.use(errorMiddleware);
 

@@ -1,9 +1,12 @@
 # dependencies
-/backend/node_modules
+/identity-server/node_modules
+/resource-server/node_modules
 /.pnp
 .pnp.js
 /.vscode/
-/backend/package-lock.json
+/identity-server/package-lock.json
+/resource-server/package-lock.json
 
 # misc
-/backend/config/config.env
+/identity-server/config/config.env
+/resource-server/config/config.env
