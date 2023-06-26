@@ -1,0 +1,18 @@
+{
+  "name": "login-meme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "identity-server-install": "npm install --prefix ./identity-server",
+    "identity-server-prod": "node identity-server/server.js",
+    "resource-server-install": "npm install && npm install --prefix ./resource",
+    "resource-server-prod": "node resource-server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
