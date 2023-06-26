@@ -5,7 +5,7 @@
   "scripts": {
     "identity-server-install": "npm install --prefix ./identity-server",
     "identity-server-prod": "node identity-server/server.js",
-    "resource-server-install": "npm install && npm install --prefix ./resource",
+    "resource-server-install": "npm install && npm install --prefix ./resource-server",
     "resource-server-prod": "node resource-server/server.js"
   },
   "keywords": [],
