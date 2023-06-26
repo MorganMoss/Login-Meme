@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-require("dotenv").config();
 app.use(express.static('public'));
+require("dotenv").config();
 const mime = require('mime');
 mime.types['css'] = 'text/css';
 
