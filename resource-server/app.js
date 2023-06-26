@@ -1,23 +1,18 @@
 const express = require('express');
 const app = express();
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 require("dotenv").config();
 const mime = require('mime');
 mime.types['css'] = 'text/css';
 
 
-
-// Import your routes
 const routes = require("./routes/user");
 
-// Use the routes
 app.use("/", routes);
 
-// Start the server
 app.listen(8081, () => {
   console.log("Server started on port 8081");
 });
-
 
 const errorMiddleware = require('./middlewares/catchError');
 
