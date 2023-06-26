@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/login.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+    <section class="">
+      <aside class="highScoreHeader">
+        <p>Hight score: </p>
+      </aside>
+        <fieldset>   
+            <img
+              class="logo"
+              alt="Login meme logo"
+              src="../public/images/not-bad-meme.png"
+            />
+            <h1>Login Meme</h1>  
+
+            <input type="email" id="emailInput" placeholder="Enter an email address">
+            <input type="password" id="passwordInput" placeholder="Password">
+            <button onclick="validateEmail()">Login</button>
+            <p id="result"></p>
+
+              <span class="link-container">
+                <p class="forgot-password">
+                  <a href="/errors">Forgot password?</a>
+                </p>
+              </span>
+            </fieldset>
+    </section>
+</main>
+<script src="../public/js/validation.js"></script>
+</body>
+</html>

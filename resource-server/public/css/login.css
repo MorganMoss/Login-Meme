@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+}
+main {
+  background-image: linear-gradient(
+    140deg,
+    #79E0EE 0%,
+    #98EECC 50%,
+    #D0F5BE 75%
+  );
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  backdrop-filter: blur(8px);
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+input {
+  border-radius: 8px;
+  padding: 4px;
+  margin-top: 8px;
+}
+
+button {
+  border-radius: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 8px;
+}
+.googleSignInButton {
+  background-color: white;
+  
+}
+
+.hiddenImages {
+  display: none;
+}
+aside {
+  border: 5px;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+}
+
+.highScoreHeader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border: black;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.5);
+  padding: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 16px;
+  margin-top: 16px;
+  color: black;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border:black;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.5);
+  padding: 1em;
+  margin-top: 120px;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.forgot-password {
+  margin-top: 1em;
+  font-size: 0.875em;
+  text-align: center;
+  color: #5f6368;
+}
+
+
+.forgot-password a {
+  text-decoration: none;
+  color: #5f6368;
+}
+
+
+.forgot-password a:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .googleLogo {
+    max-width: 30px ;
+  }
