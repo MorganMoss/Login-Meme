@@ -2,7 +2,6 @@
   "name": "login-meme",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "identity-server-install": "npm install --prefix ./identity-server",
     "identity-server-prod": "node identity-server/server.js",

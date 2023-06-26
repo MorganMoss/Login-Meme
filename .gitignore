@@ -11,5 +11,5 @@
 /identity-server/config/config.env
 /resource-server/config/config.env
 
-/config.env
+/.env
 /node_modules

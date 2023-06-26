@@ -1,7 +1,6 @@
 const app = require('./app');
 const { connectToDatabase } = require('./config/database');
-
-const dotenv = require('dotenv');
+require("dotenv").config();
 
 process.on('uncaughtExpetion', err => {
     console.log(`ERROR: ${err.message}`);
@@ -9,12 +8,10 @@ process.on('uncaughtExpetion', err => {
     process.exit(1);
 });
 
-dotenv.config({ path: './config/config.env' })
-
 connectToDatabase();
 
 const server = app.listen(process.env.PORT, () => {
-    console.log(`Server started on PORT: ${process.env.PORT} in ${process.env.NODE_ENV} mode.`);
+    console.log(`Server started on PORT: ${process.env.RESOURCE_SERVER_PORT} in ${process.env.NODE_ENV} mode.`);
 });
 
 process.on('unhandledRejection', err => {
