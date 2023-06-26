@@ -33,7 +33,7 @@
         
         SMTP_EMAIL = *
         SMTP_PASSWORD = *
-        SMTP_FROM_PASSWORD = noreply@LoginMeme.co.za
+        SMTP_FROM_PASSWORD = noreply@LoginMeme.co.za (This is not a password, this is sent in the email, to lazy to change the key name everywhere)
         SMTP_FROM_NAME = LoginMeme 
 
 ### 3. Running the website
