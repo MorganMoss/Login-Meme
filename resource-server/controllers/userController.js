@@ -1,31 +1,9 @@
-const path = require("path");
+const express = require('express');
+const router = express.Router();
 
-const registerView = (req, res) => {
-  res.sendFile(path.join(__dirname, "../views/register.html"));
-};
+const { incrementLoginAttempt } = require('../services/userService');
+const { isAuthenticatedUser } = require('../middlewares/auth')
 
-const loginView = (req, res) => {
-  res.sendFile(path.join(__dirname, "../views/login1.html"));
-};
+router.route('/incrementLoginAttempt').get(isAuthenticatedUser, incrementLoginAttempt);
 
-const googleSignInView = (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/index.html"));
-};
-
-const emailPassView = (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/loginEmailPass.html"));
-};
-
-const emailPassVerificationView = (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/loginEmailPassVerification.html"));
-};
-
-
-
-module.exports = {
-    registerView,
-    loginView,
-    googleSignInView,
-    emailPassView,
-    emailPassVerificationView
-  };
+module.exports = router;
