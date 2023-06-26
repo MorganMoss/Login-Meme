@@ -1,11 +1,8 @@
 const express = require('express');
 const app = express();
-
-const dotenv = require('dotenv');
+require("dotenv").config();
 
 const errorMiddleware = require('./middlewares/catchError');
-
-dotenv.config({ path: './config/config.env' });
 
 app.use(express.json());
 
