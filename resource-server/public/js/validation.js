@@ -4,7 +4,6 @@ function validateEmailAndPassword() {
 }
 
 function validateEmail() {
-  console.log("Getting called")
   const email = document.getElementById("emailInput").value;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const domainPattern = /@(.+)\.bbd\.co\.za$/;
