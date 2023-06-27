@@ -1,6 +1,4 @@
 function redirectToRegistration() {
-  // Redirect to another route
-  console.log("Clicked")
   window.location.href = "/register";
 }
 
@@ -12,26 +10,22 @@ function changeImage() {
   const registerButton = document.getElementById("registerButton");
 
   if (endLoop >= 2) {
-    // After both images have been shown and hidden
     firstImage.style.display = "none";
     secondImage.style.display = "none";
     registerButton.style.display = "block";
   } else if (endLoop === 1) {
-    // Show the second image and hide the first image
     firstImage.style.display = "none";
     secondImage.style.display = "block";
     endLoop += 1;
-    setTimeout(changeImage, 5000); // Show the second image for 2 seconds
+    setTimeout(changeImage, 5000); 
   } else {
-    // Show the first image and prepare for the second image
     firstImage.style.display = "block";
     secondImage.style.display = "none";
     endLoop += 1;
-    setTimeout(changeImage, 5000); // Show the first image for 2 seconds
+    setTimeout(changeImage, 5000); 
   }
 }
 
-// Initial image display
 changeImage();
   
   
