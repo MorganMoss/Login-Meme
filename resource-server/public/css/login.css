@@ -1,13 +1,12 @@
 body {
   margin: 0;
 }
+
 main {
-  background-image: linear-gradient(
-    140deg,
-    #79E0EE 0%,
-    #98EECC 50%,
-    #D0F5BE 75%
-  );
+  background-image: linear-gradient(140deg,
+      #79E0EE 0%,
+      #98EECC 50%,
+      #D0F5BE 75%);
   height: 100vh;
   width: 100%;
   margin: 0;
@@ -16,12 +15,14 @@ main {
   align-self: center;
   backdrop-filter: blur(8px);
 }
+
 section {
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
 }
+
 input {
   border-radius: 8px;
   padding: 4px;
@@ -36,6 +37,7 @@ button {
   padding-right: 16px;
   margin-top: 8px;
 }
+
 .hiddenRegisterButton {
   display: none;
   width: 180px;
@@ -46,16 +48,19 @@ button {
   padding-right: 16px;
   margin-top: 8px;
 }
+
 .googleSignInButton {
   background-color: white;
-  
+
 }
 
 .hiddenImages {
   display: none;
   width: 500px;
-  padding-top: 200px;;
+  padding-top: 200px;
+  ;
 }
+
 .errorMessageImg {
   width: 20%;
   padding-top: 40px;
@@ -70,7 +75,7 @@ button {
   border-style: solid;
   border: black;
   border-radius: 8px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 4px;
   padding-left: 20px;
   padding-right: 20px;
@@ -86,9 +91,9 @@ fieldset {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border:black;
+  border: black;
   border-radius: 8px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 1em;
   margin-top: 120px;
   min-width: 300px;
@@ -115,22 +120,25 @@ fieldset {
 }
 
 .link-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .googleLogo {
-    max-width: 30px ;
-  }
-  .redirectingRobot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
-    width: 500px;
-    padding-top: 200px;;
-  }
+.googleLogo {
+  max-width: 30px;
+}
 
-   /* Spaceship */
+.redirectingRobot {
 
-   /* .spaceshipImage {
+  width: 500px;
+  padding-top: 200px;
+  ;
+}
+
+/* Spaceship */
+
+/* .spaceshipImage {
      transform: rotate(20deg);
   }
   
@@ -156,4 +164,3 @@ fieldset {
       transform: translate(100vw, 100vh);
     }
   } */
-  
