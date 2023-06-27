@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="/css/login.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/loginEmailPass.js"></script>
+
 
 </head>
 <body>
@@ -19,7 +21,7 @@
         <p id="highScorePoints"> </p>
 
       </aside>
-        <fieldset>   
+        <fieldset id="registerForm">   
             <img
               class="logo"
               alt="Login meme logo"
@@ -29,7 +31,7 @@
 
             <input type="email" id="emailInput" placeholder="Enter an email address">
             <input type="password" id="passwordInput" placeholder="Password">
-            <button onclick="validateEmail()">Login</button>
+            <button type="submit" onclick="validateEmail()">Login</button>
             <p id="emailResult"></p>
 
               <span class="link-container">
