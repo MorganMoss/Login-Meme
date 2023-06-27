@@ -38,7 +38,23 @@ async function findUserByIDAndUpdateAttempt(id) {
     return null;
 }
 
+async function getLoginCounterValue(id) {
+    try {
+        let pool = await sql.connect(config)
+        let result = await pool.request()
+            .input('input_id', sql.Int, id)
+            .query('SELECT * FROM login_counter WHERE userID = @input_id');
+
+        return { loginCounter: result.recordset[0], rowsAffected: result.rowsAffected };
+    } catch (err) {
+        console.log('err in sql statement: ', err);
+    }
+
+    return null;
+}
+
 module.exports = {
     findUserByIDAndUpdateAttempt,
-    findUserByID
+    findUserByID,
+    getLoginCounterValue
 }

@@ -1,4 +1,5 @@
-const identityServer = 'https://nczesv2fdg.eu-west-1.awsapprunner.com'
+const identityServer = 'https://nczesv2fdg.eu-west-1.awsapprunner.com';
+const resourceServer = 'https://8c8pg7kbyf.eu-west-1.awsapprunner.com';
 
 async function registerUser(data) {
     try {
@@ -20,7 +21,7 @@ async function registerUser(data) {
         const res = await response.json();
 
         if (res.success) {
-            return response.success;
+            return res.success;
         }
     } catch(err) {
         console.log(err);
@@ -30,6 +31,7 @@ async function registerUser(data) {
 async function loginUser(data) {
     try {
         const url = `${identityServer}/api/v1/auth/login`;
+        const counterUrl = `${resourceServer}/api/incrementLoginAttempt`;
 
         const fields = JSON.stringify({
             email: data.email,
@@ -49,6 +51,15 @@ async function loginUser(data) {
         if (res.success) {
             const token = res.token;
             localStorage.setItem("authorization", token);
+
+            await fetch(counterUrl, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "authorization": token,
+                },
+            });
+
             return res.success;
         }
     } catch(err) {
@@ -111,7 +122,47 @@ async function verifyCode(data) {
 }
 
 async function getScore() {
+    try {
+        const url = `${resourceServer}/getAttempt`;
 
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "authorization": localStorage.getItem("authorization"),
+            },
+        });
+
+        const res = await response.json();
+        if (res.success) {
+            return res;
+        }
+    } catch(err) {
+        console.log(err);
+    }
 }
 
-  export { registerUser, loginUserWithEmailVerification, verifyCode, getScore, loginUser };
+async function logout() {
+    try {
+        const url = `${identityServer}/api/v1/logout`;
+
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "authorization": localStorage.getItem("authorization"),
+            },
+        });
+
+        const res = await response.json();
+
+        if (res.success) {
+            localStorage.setItem("authorization", "");
+            return res.success;
+        }
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+  export { registerUser, loginUserWithEmailVerification, verifyCode, loginUser, logout, getScore };

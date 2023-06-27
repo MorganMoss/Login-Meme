@@ -3,11 +3,11 @@
 ## Prerequisite
 
 - SQL Server
-- SQL Server Authentication selected
+- SQL Server Authentication (https://stackoverflow.com/a/58329203)
 
 ### Link to website
 
-- Link
+- Link - https://8c8pg7kbyf.eu-west-1.awsapprunner.com
 
 ### 1. Setup the DB
 
@@ -17,35 +17,34 @@
 ### 2. Add Dotenv variables
 
     - Add a '.env' file in the root of the project
-      - config/config.env
-      - Replace * with your information
-    >   IDENTITY_SERVER_PORT = *
-        RESOURCE_SERVER_PORT = *
+      - .env
+      - Replace ! with your information
+        IDENTITY_SERVER_PORT = !
+        RESOURCE_SERVER_PORT = !
 
-        JWT_SECRET = *
+        JWT_SECRET = !
         
         NODE_ENV = Production
         
-        DB_USER = *
-        DB_PASSWORD = *
+        DB_USER = !
+        DB_PASSWORD = !
         DB_NAME = LoginMemeDB
-        DB_SERVER = *
+        DB_SERVER = !
         
-        SMTP_EMAIL = *
-        SMTP_PASSWORD = *
-        SMTP_FROM_PASSWORD = noreply@LoginMeme.co.za (This is not a password, this is sent in the email, to lazy to change the key name everywhere)
+        SMTP_EMAIL = !
+        SMTP_PASSWORD = !
+        SMTP_FROM_PASSWORD = noreply@LoginMeme.co.za (This is not a password, this is sent in the email, too lazy to change the key name everywhere)
         SMTP_FROM_NAME = LoginMeme 
 
 ### 3. Running the website
 
-    - Root Directory
-      - npm install
-  
+In the Root Directory
+  - npm install
     - Run the Identity-Server
       - npm run identity-server-install 
       - npm run identity-server-prod
   
-    -  Run the Resource-Server
+    - Run the Resource-Server
       - npm run resource-server-install 
       - npm run resource-server-prod
 
