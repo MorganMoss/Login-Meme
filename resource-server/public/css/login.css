@@ -46,6 +46,15 @@ button {
   padding-right: 16px;
   margin-top: 8px;
 }
+.loginButton {
+  width: 180px;
+  /* border-radius: 8px;
+  padding-top: 400px;
+  padding-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 8px; */
+}
 .googleSignInButton {
   background-color: white;
   
@@ -62,7 +71,7 @@ button {
 }
 
 
-.highScoreHeader {
+.highScoreHeader, .loginButton {
   position: absolute;
   display: flex;
   top: 0;

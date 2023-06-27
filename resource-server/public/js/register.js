@@ -15,6 +15,7 @@ document
       if (data) {
         window.location.href = "/login2";
       } else {
+        window.location.href = "/error";
         console.log('error')
       }
     });
