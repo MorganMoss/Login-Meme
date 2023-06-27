@@ -15,6 +15,7 @@ document
       if (data) {
         console.log('success 1');
       } else {
+      window.location.href = "/error";
         console.log('error')
       }
     });
@@ -35,6 +36,7 @@ document
         console.log('success 2');
         window.location.href = "/";
       } else {
+      window.location.href = "/error";
         console.log('error')
       }
     });

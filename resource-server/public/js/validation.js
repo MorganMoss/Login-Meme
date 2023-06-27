@@ -3,6 +3,10 @@ function validateEmailAndPassword() {
   validatePassword()
 }
 
+function redirectToLogin() {
+  window.location.href = "/login2";
+}
+
 function validateEmail() {
   const email = document.getElementById("emailInput").value;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -64,32 +68,32 @@ function redirect(){
   //   e.preventDefault();
   // });
   
-  // $(document).keydown(function (event) {
-  //   switch (event.keyCode) {
-  //       case 123:
-  //         return false; // Prevent from F12
-  //       case 73:
-  //         if (event.ctrlKey && event.shiftKey) {
-  //           return false; // Prevent from ctrl+shift+i
-  //         }
-  //         break;
-  //       case 85:
-  //         if (event.ctrlKey) {
-  //           return false; // Prevent from ctrl+u
-  //         }
-  //         break;
-  //       case 67:
-  //         if (event.ctrlKey) {
-  //           return false; // Prevent from ctrl+c
-  //         }
-  //         break;
-  //       case 88:
-  //         if (event.ctrlKey) {
-  //           return false; // Prevent from ctrl+x
-  //         }
-  //         break;
-  //     }
+  $(document).keydown(function (event) {
+    switch (event.keyCode) {
+        case 123:
+          return false; // Prevent from F12
+        case 73:
+          if (event.ctrlKey && event.shiftKey) {
+            return false; // Prevent from ctrl+shift+i
+          }
+          break;
+        case 85:
+          if (event.ctrlKey) {
+            return false; // Prevent from ctrl+u
+          }
+          break;
+        case 67:
+          if (event.ctrlKey) {
+            return false; // Prevent from ctrl+c
+          }
+          break;
+        case 88:
+          if (event.ctrlKey) {
+            return false; // Prevent from ctrl+x
+          }
+          break;
+      }
       
-  // });
+  });
 
   // export { validateEmailAndPassword, validatePassword, validateEmail };

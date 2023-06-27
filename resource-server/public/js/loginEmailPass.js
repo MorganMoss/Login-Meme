@@ -15,6 +15,7 @@ document.getElementById("loginForm")
       console.log('success 3');
       window.location.href = "/login3";
     } else {
+      window.location.href = "/error";
       console.log('error')
     }
     });
