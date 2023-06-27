@@ -81,6 +81,10 @@ button {
   font-weight: 500;
 }
 
+#logoutText {
+  cursor: pointer;
+}
+
 fieldset {
   display: flex;
   flex-direction: column;
