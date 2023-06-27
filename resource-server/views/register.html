@@ -26,16 +26,19 @@
             <h1>Login Meme</h1>  
             <h2>Please register below</h2>
 
-            <input type="email" id="emailInput" placeholder="Enter an email address">
-            <input type="password" id="passwordInput" placeholder="Password">
-            <button onclick="validateEmailAndPassword()" >Register</button>
-            <p id="emailResult"></p>
-            <p id="passwordResult"></p>
+            <form id="registerForm">
+              <input type="email" id="emailInput" name="email" placeholder="Enter an email address">
+              <input type="password" id="passwordInput" name="password" placeholder="Password">
+              <button type="submit">Register</button>
+              <p id="emailResult"></p>
+              <p id="passwordResult"></p>
+            </form>
 
 
             </fieldset>
     </section>
 </main>
-<script src="/js/validation.js"></script>
+  <script type="module" src="/js/register.js"></script>
+  <script src="/js/validation.js"></script>
 </body>
 </html>
