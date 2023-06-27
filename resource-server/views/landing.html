@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login 1</title>
+    <link rel="stylesheet" type="text/css" href="/css/login.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <aside class="highScoreHeader">
+                <p>Hight score: </p>
+                <p id="highScorePoints"> </p>
+              </aside>
+        </header>
+    <section class="">
+        <img
+        id="firstImage"
+        class="hiddenImages"
+        alt="Desk"
+        src="/images/fullWelcomeMessage.png"
+      />
+        <img
+        id="secondImage"
+        class="hiddenImages"
+        alt="Desk"
+        src="/images/pleaseRegister.png"
+      />
+
+        <img
+        id="registerButton"
+        class="hiddenRegisterButton"
+        alt="Register"
+        src="/images/registerButton.png"
+        onclick="redirectToRegistration()"
+      /> 
+
+    </section>
+</main>
+
+<script src="/js/welcome.js"></script>
+</body>
+</html>
