@@ -36,6 +36,16 @@ button {
   padding-right: 16px;
   margin-top: 8px;
 }
+.hiddenRegisterButton {
+  display: none;
+  width: 180px;
+  border-radius: 8px;
+  padding-top: 400px;
+  padding-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 8px;
+}
 .googleSignInButton {
   background-color: white;
   
@@ -43,18 +53,14 @@ button {
 
 .hiddenImages {
   display: none;
+  width: 500px;
+  padding-top: 200px;;
 }
 .errorMessageImg {
   width: 20%;
   padding-top: 40px;
 }
 
-/* aside {
-  border: 5px;
-  border-radius: 8px;
-  background-color: red;
-  color: white;
-} */
 
 .highScoreHeader {
   position: absolute;
@@ -71,6 +77,8 @@ button {
   margin-right: 16px;
   margin-top: 16px;
   color: black;
+  font-size: large;
+  font-weight: 500;
 }
 
 fieldset {

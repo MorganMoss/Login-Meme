@@ -1,44 +1,39 @@
-let endLoop = 0
+function redirectToRegistration() {
+  // Redirect to another route
+  console.log("Clicked")
+  window.location.href = "/register";
+}
 
-function showImage(elementId, duration) {
-    const element = document.getElementById(elementId);
-    // element.style.display = "block";
+let endLoop = 0;
 
-    setTimeout(function() {
-      element.style.display = "none";
-      changeImage();
-    }, duration);
+function changeImage() {
+  const firstImage = document.getElementById("firstImage");
+  const secondImage = document.getElementById("secondImage");
+  const registerButton = document.getElementById("registerButton");
+
+  if (endLoop >= 2) {
+    // After both images have been shown and hidden
+    firstImage.style.display = "none";
+    secondImage.style.display = "none";
+    registerButton.style.display = "block";
+  } else if (endLoop === 1) {
+    // Show the second image and hide the first image
+    firstImage.style.display = "none";
+    secondImage.style.display = "block";
+    endLoop += 1;
+    setTimeout(changeImage, 5000); // Show the second image for 2 seconds
+  } else {
+    // Show the first image and prepare for the second image
+    firstImage.style.display = "block";
+    secondImage.style.display = "none";
+    endLoop += 1;
+    setTimeout(changeImage, 5000); // Show the first image for 2 seconds
   }
+}
 
+// Initial image display
+changeImage();
   
-  function changeImage() {
-    const firstImage = document.getElementById("firstImage");
-    const secondImage = document.getElementById("secondImage");
-    if (firstImage.style.display == "none" && endLoop < 1) {
-    console.log("firstImage display is none")
-      firstImage.style.display = "block";
-      secondImage.style.display = "none";
-      setTimeout(function() {
-        firstImage.style.display = "block";
-        // check here for looping condition
-        endLoop =+ 1
-        changeImage();
-      }, 2000); // Show the first image for 10 seconds
-    } 
-    
-    if(firstImage.style.display == "block" && endLoop < 1) {
-    console.log("firstImage display is block")
-      firstImage.style.display = "none";
-      secondImage.style.display = "block";
-      setTimeout(function() {
-        secondImage.style.display = "none";
-        changeImage();
-      }, 2000); // Show the second image for 10 seconds
-    }
-  }
-  
-  // Initial image display
-  showImage("firstImage", 2000); 
   
 
 
