@@ -4,8 +4,8 @@ const registerView = (req, res) => {
   res.sendFile(path.join(__dirname, "../views/register.html"));
 };
 
-const loginView = (req, res) => {
-  res.sendFile(path.join(__dirname, "../views/login1.html"));
+const landingView = (req, res) => {
+  res.sendFile(path.join(__dirname, "../views/landing.html"));
 };
 
 const googleSignInView = (req, res) => {
@@ -20,12 +20,16 @@ const emailPassVerificationView = (req, res) => {
     res.sendFile(path.join(__dirname, "../views/loginEmailPassVerification.html"));
 };
 
+const errorView = (req, res) => {
+  res.sendFile(path.join(__dirname, "../views/error.html"));
+};
 
 
 module.exports = {
     registerView,
-    loginView,
+    landingView,
     googleSignInView,
     emailPassView,
-    emailPassVerificationView
+    emailPassVerificationView,
+    errorView
   };

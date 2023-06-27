@@ -16,19 +16,21 @@
     <section class="">
       <aside class="highScoreHeader">
         <p>Hight score: </p>
+        <p id="highScorePoints"> </p>
+
       </aside>
         <fieldset>   
             <img
               class="logo"
               alt="Login meme logo"
-              src="../public/images/not-bad-meme.png"
+              src="/images/not-bad-meme.png"
             />
             <h1>Login Meme</h1>  
 
             <input type="email" id="emailInput" placeholder="Enter an email address">
             <input type="password" id="passwordInput" placeholder="Password">
             <button onclick="validateEmail()">Login</button>
-            <p id="result"></p>
+            <p id="emailResult"></p>
 
               <span class="link-container">
                 <p class="forgot-password">

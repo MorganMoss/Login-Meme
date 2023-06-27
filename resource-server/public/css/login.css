@@ -19,7 +19,8 @@ main {
 section {
   display: flex;
   flex-direction: column;
-  align-self: center;
+  align-items: center; 
+  justify-content: center; 
 }
 input {
   border-radius: 8px;
@@ -43,15 +44,21 @@ button {
 .hiddenImages {
   display: none;
 }
-aside {
+.errorMessageImg {
+  width: 20%;
+  padding-top: 40px;
+}
+
+/* aside {
   border: 5px;
   border-radius: 8px;
   background-color: red;
   color: white;
-}
+} */
 
 .highScoreHeader {
   position: absolute;
+  display: flex;
   top: 0;
   right: 0;
   border-style: solid;
