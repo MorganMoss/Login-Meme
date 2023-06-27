@@ -1,14 +1,9 @@
 import * as api from "./service.js";
-import * as Valid from "./validation.js";
 
 document
   .getElementById("loginFromWithVerification")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-
-    // if(!Valid.validateEmail()) {
-    //     return;
-    // }
 
     let email = document.getElementById("emailInput").value;
     let password = document.getElementById("passwordInput").value;
