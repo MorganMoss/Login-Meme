@@ -1,29 +1,26 @@
+import * as api from "./service.js";
 import * as Validation from "./validation.js";
 
-document
-  .getElementById("registerForm")
+document.getElementById("loginForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
+
+    // if(!Valid.validateEmail()) {
+    //     return;
+    // }
 
     let email = document.getElementById("emailInput").value;
     let password = document.getElementById("passwordInput").value;
 
-    const loginData = { email, password };
+    const response = api.loginUser({ email: email, password: password });
 
-    fetch('http://localhost:8080/api/v1/auth/login', {
-        method: 'POST',
-        body: loginData,
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).then((response) => {
-        if (response.status === 200) {
-          window.location.href = "/login3";
-        } else {
-          console.log("Error:", response.status);
-        }
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-      });
+    response.then((data) => {
+      console.log('data: ', data)
+    if (data) {
+      console.log('success 3');
+      window.location.href = "/login3";
+    } else {
+      console.log('error')
+    }
+    });
   });

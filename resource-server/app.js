@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 app.use(express.static(__dirname + '/public'));
 require("dotenv").config();
+const bodyParser = require('body-parser');
 const mime = require('mime');
 mime.types['css'] = 'text/css';
 
@@ -11,7 +12,8 @@ app.listen(8081, () => {
 
 const errorMiddleware = require('./middlewares/catchError');
 
-app.use(express.json());
+// app.use(express.json());
+app.use(bodyParser.json());
 
 const routes = require("./routes/user");
 

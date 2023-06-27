@@ -1,6 +1,7 @@
 function validateEmailAndPassword() {
-  validateEmail()
-  validatePassword()
+  const result = validateEmail()
+  validatePassword();
+  return result;
 }
 
 function validateEmail() {
@@ -10,8 +11,10 @@ function validateEmail() {
 
   if (emailPattern.test(email) && domainPattern.test(email)) {
     document.getElementById("emailResult").innerHTML = "Valid email address";
+    return true;
   } else {
     document.getElementById("emailResult").innerHTML = "Invalid email address";
+    return false;
   }
 }
 
@@ -89,3 +92,5 @@ function redirect(){
   //     }
       
   // });
+
+  export { validateEmailAndPassword, validatePassword, validateEmail };

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LoginMeme</title>
     <link rel="stylesheet" type="text/css" href="/css/login.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/loginEmailPass.js"></script>
+    <script type="module" src="/js/loginEmailPass.js"></script>
 
 
 </head>
@@ -21,17 +21,18 @@
         <p id="highScorePoints"> </p>
 
       </aside>
-        <fieldset id="registerForm">   
+        <fieldset>   
             <img
               class="logo"
               alt="Login meme logo"
               src="/images/not-bad-meme.png"
             />
             <h1>Login Meme</h1>  
-
+            <form id="loginForm">
             <input type="email" id="emailInput" placeholder="Enter an email address">
             <input type="password" id="passwordInput" placeholder="Password">
-            <button type="submit" onclick="validateEmail()">Login</button>
+            <button type="submit">Login</button>
+            <!-- onclick="validateEmail()" -->
             <p id="emailResult"></p>
 
               <span class="link-container">
@@ -39,9 +40,10 @@
                   <a href="/errors">Forgot password?</a>
                 </p>
               </span>
+            </form>
             </fieldset>
     </section>
 </main>
-<script src="/js/validation.js"></script>
+<!-- <script src="/js/validation.js"></script> -->
 </body>
 </html>
