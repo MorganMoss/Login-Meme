@@ -64,9 +64,9 @@ function redirect(){
   
 }
 
-  // $(document).bind("contextmenu", function (e) {
-  //   e.preventDefault();
-  // });
+  $(document).bind("contextmenu", function (e) {
+    e.preventDefault();
+  });
   
   $(document).keydown(function (event) {
     switch (event.keyCode) {
