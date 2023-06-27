@@ -122,3 +122,38 @@ fieldset {
   .googleLogo {
     max-width: 30px ;
   }
+  .redirectingRobot {
+
+    width: 500px;
+    padding-top: 200px;;
+  }
+
+   /* Spaceship */
+
+   /* .spaceshipImage {
+     transform: rotate(20deg);
+  }
+  
+  .spaceshipContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #flyingSpaceship {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: flyAnimation 5s linear infinite;
+  }
+  
+  @keyframes flyAnimation {
+    0% {
+      transform: translate(-100%, -100%);
+    }
+    100% {
+      transform: translate(100vw, 100vh);
+    }
+  } */
+  
