@@ -9,7 +9,7 @@ router.route('/incrementLoginAttempt').get(isAuthenticatedUser, incrementLoginAt
 
 router.get("/", landingView);
 router.get("/register", registerView);
-router.get("/login1", googleSignInView);
+// router.get("/login1", googleSignInView);
 router.get("/login2", emailPassView);
 router.get("/login3", emailPassVerificationView);
 router.get("/error", errorView);

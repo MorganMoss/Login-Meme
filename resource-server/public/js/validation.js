@@ -10,8 +10,10 @@ function validateEmail() {
 
   if (emailPattern.test(email) && domainPattern.test(email)) {
     document.getElementById("emailResult").innerHTML = "Valid email address";
+    return true;
   } else {
     document.getElementById("emailResult").innerHTML = "Invalid email address";
+    return false;
   }
 }
 
@@ -37,15 +39,15 @@ function validatePassword() {
   switch (strengthLevel) {
     case 0:
     case 1:
-      strengthText = "Weak";
+      strengthText = "Weak lol";
       break;
     case 2:
     case 3:
-      strengthText = "Medium";
+      strengthText = "Medium rare";
       break;
     case 4:
     case 5:
-      strengthText = "Strong";
+      strengthText = "Strong I guess";
       break;
     default:
       strengthText = "Invalid";
@@ -89,3 +91,5 @@ function redirect(){
   //     }
       
   // });
+
+  // export { validateEmailAndPassword, validatePassword, validateEmail };
