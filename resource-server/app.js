@@ -2,13 +2,9 @@ const express = require('express');
 const app = express();
 app.use(express.static(__dirname + '/public'));
 require("dotenv").config();
+const bodyParser = require('body-parser');
 const mime = require('mime');
 mime.types['css'] = 'text/css';
-
-
-const routes = require("./routes/user");
-
-app.use("/", routes);
 
 app.listen(8081, () => {
   console.log("Server started on port 8081");
@@ -16,11 +12,12 @@ app.listen(8081, () => {
 
 const errorMiddleware = require('./middlewares/catchError');
 
-app.use(express.json());
+// app.use(express.json());
+app.use(bodyParser.json());
 
-const user = require('./controllers/userController');
+const routes = require("./routes/user");
 
-// app.use('/api/v1/', user);
+app.use("/", routes);
 
 app.use(errorMiddleware);
 

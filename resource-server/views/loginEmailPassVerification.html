@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Meme</title>
     <link rel="stylesheet" type="text/css" href="/css/login.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -19,30 +19,34 @@
         <p id="highScorePoints"> </p>
 
       </aside>
-        <fieldset>   
-            <img
-              class="logo"
-              alt="Login meme logo"
-              src="/images/not-bad-meme.png"
-            />
-            <h1>Login Meme</h1>  
+          <fieldset>   
+              <img
+                class="logo"
+                alt="Login meme logo"
+                src="/images/not-bad-meme.png"
+              />
+              <h1>Login Meme</h1>  
 
-            <input type="email" id="emailInput" placeholder="Enter an email address">
-            <input type="password" id="passwordInput" placeholder="Password">
-            <button onclick="validateEmail()">Login</button>
-            <p id="emailResult"></p>
-            <input class="verificationCode"  type="password" id="verificationInput" placeholder="Verification Code">
-            <button class="verificationCode" onclick=" ">Submit</button>
+              <form id="loginFromWithVerification">
+                <input type="email" id="emailInput" placeholder="Enter an email address">
+                <input type="password" id="passwordInput" placeholder="Password">
+                <button type="submit" onclick="validateEmail()">Login</button>
+                <p id="emailResult"></p>
+              </form>
+              <form id="verifyCodeForm">
+                <input class="verificationCode" type="password" id="verificationInput" placeholder="Verification Code">
+                <button class="verificationCode" type="submit">Submit</button>
+              </form>
 
-
-              <span class="link-container">
-                <p class="forgot-password">
-                  <a href="/errors">Forgot password?</a>
-                </p>
-              </span>
-            </fieldset>
+                <span class="link-container">
+                  <p class="forgot-password">
+                    <a href="/errors">Forgot password?</a>
+                  </p>
+                </span>
+              </fieldset>
     </section>
 </main>
+<script type="module" src="/js/loginWithEmailVerification.js"></script>
 <script src="/js/validation.js"></script>
 </body>
 </html>
