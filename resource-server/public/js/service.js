@@ -1,6 +1,8 @@
+const identityServer = 'https://nczesv2fdg.eu-west-1.awsapprunner.com'
+
 async function registerUser(data) {
     try {
-        const url = "http://localhost:8080/api/v1/auth/register";
+        const url = `${identityServer}/api/v1/auth/register`;
 
         const fields = JSON.stringify({
             email: data.email,
@@ -14,9 +16,11 @@ async function registerUser(data) {
             },
             body: fields,
         });
-        console.log('response: ', response);
-        if (response.ok) {
-            return response.ok;
+
+        const res = await response.json();
+
+        if (res.success) {
+            return response.success;
         }
     } catch(err) {
         console.log(err);
@@ -25,7 +29,7 @@ async function registerUser(data) {
 
 async function loginUser(data) {
     try {
-        const url = "http://localhost:8080/api/v1/auth/login";
+        const url = `${identityServer}/api/v1/auth/login`;
 
         const fields = JSON.stringify({
             email: data.email,
@@ -40,12 +44,12 @@ async function loginUser(data) {
             body: fields,
         });
 
-        
-        if (response.ok) {
-            const token = response.headers.get("authorization");
-            console.log('response.headers ', response.headers)
+        const res = await response.json();
+       
+        if (res.success) {
+            const token = res.token;
             localStorage.setItem("authorization", token);
-            return response.ok;
+            return res.success;
         }
     } catch(err) {
         console.log(err);
@@ -55,14 +59,12 @@ async function loginUser(data) {
 
 async function loginUserWithEmailVerification(data) {
     try {
-        const url = "http://localhost:8080/api/v1/auth/login/verification";
+        const url = `${identityServer}/api/v1/auth/login/verification`;
 
         const fields = JSON.stringify({
             email: data.email,
             password: data.password,
         });
-
-        console.log('token: ', localStorage.getItem("authorization"))
 
         const response = await fetch(url, {
             method: "POST",
@@ -73,8 +75,10 @@ async function loginUserWithEmailVerification(data) {
             body: fields,
         });
 
-        if (response.ok) {
-            return response.ok;
+        const res = await response.json();
+
+        if (res.success) {
+            return res.success;
         }
     } catch(err) {
         console.log(err);
@@ -83,7 +87,7 @@ async function loginUserWithEmailVerification(data) {
 
 async function verifyCode(data) {
     try {
-        const url = "http://localhost:8080/api/v1/auth/verify/code";
+        const url = `${identityServer}/api/v1/auth/verify/code`;
 
         const fields = JSON.stringify({
             verifyCode: data.verifyCode
@@ -93,7 +97,6 @@ async function verifyCode(data) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                // localStorage.getItem("authorization"),
                 "authorization": localStorage.getItem("authorization"),
             },
             body: fields,
