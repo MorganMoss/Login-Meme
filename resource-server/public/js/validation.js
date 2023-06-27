@@ -1,10 +1,10 @@
 function validateEmailAndPassword() {
-  const result = validateEmail()
-  validatePassword();
-  return result;
+  validateEmail()
+  validatePassword()
 }
 
 function validateEmail() {
+  console.log("Getting called")
   const email = document.getElementById("emailInput").value;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const domainPattern = /@(.+)\.bbd\.co\.za$/;
@@ -40,15 +40,15 @@ function validatePassword() {
   switch (strengthLevel) {
     case 0:
     case 1:
-      strengthText = "Weak";
+      strengthText = "Weak lol";
       break;
     case 2:
     case 3:
-      strengthText = "Medium";
+      strengthText = "Medium rare";
       break;
     case 4:
     case 5:
-      strengthText = "Strong";
+      strengthText = "Strong I guess";
       break;
     default:
       strengthText = "Invalid";
@@ -93,4 +93,4 @@ function redirect(){
       
   // });
 
-  export { validateEmailAndPassword, validatePassword, validateEmail };
+  // export { validateEmailAndPassword, validatePassword, validateEmail };
